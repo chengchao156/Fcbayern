@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/textColorPrimary"
+    android:layout_height="match_parent"
+    tools:context="cn.fcbayern.android.ui.RankTabFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="@dimen/news_item_padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="俱乐部"
+            android:id="@+id/name"
+            android:textSize="15sp"
+            android:textColor="@color/text_color2"
+            android:layout_marginLeft="30dp"
+            android:singleLine="true"
+            android:layout_width="0dp"
+            android:layout_weight="3.5"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="胜"
+            android:id="@+id/win"
+            android:textSize="15sp"
+            android:textColor="@color/text_color2"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="平"
+            android:id="@+id/draw"
+            android:textSize="15sp"
+            android:textColor="@color/text_color2"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="负"
+            android:id="@+id/lost"
+            android:textSize="15sp"
+            android:textColor="@color/text_color2"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="进/失球"
+            android:id="@+id/goal"
+            android:textSize="15sp"
+            android:textColor="@color/text_color2"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="积分"
+            android:id="@+id/score"
+            android:textSize="15sp"
+            android:textColor="@color/text_color2"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ListView
+        android:scrollbars="none"
+        android:id="@+id/rankLv"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

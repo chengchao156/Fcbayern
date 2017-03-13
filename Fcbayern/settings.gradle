@@ -1,0 +1,4 @@
+include ':app'
+include ':SlidingMenu'
+include ':PhotoView'
+include ':PullToRefresh'

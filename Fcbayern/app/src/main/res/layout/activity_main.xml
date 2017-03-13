@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/ToolbarTitleStyle"
+            android:drawableLeft="@drawable/ic_logo"
+            android:text="@string/home"
+            android:textColor="@color/textColorPrimary" />
+
+        <ImageView
+            android:id="@+id/search"
+            style="@style/ToolbarIconStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/nav_search" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/pop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e5000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="255dp"
+            android:layout_height="350dp"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:id="@+id/bg"
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/dialog_bg">
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@mipmap/icon_logo_dialog" />
+
+            <TextView
+                android:id="@+id/personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="完善个人信息"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/personal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="享受更多拜仁官网贴心服务"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_disMiss"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/icon_dialog_close" />
+
+            <ImageView
+                android:id="@+id/wanshan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="52dp"
+                android:src="@mipmap/dialog_button" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <cn.fcbayern.android.common.MyPreference
+        android:key="change_psw"
+        android:title="修改密码" />
+
+    <cn.fcbayern.android.common.MyPreference
+        android:key="pref_key_cache"
+        android:title="@string/setting_cache" />
+    <cn.fcbayern.android.common.MyPreference
+        android:key="pref_key_version"
+        android:title="@string/setting_version" />
+    <CheckBoxPreference
+        android:key="pref_key_push"
+        android:layout="@layout/setting_preference"
+        android:title="@string/push_message"
+        android:widgetLayout="@layout/list_setting_check" />
+    <!--<PreferenceCategory-->
+    <!--android:key="other"-->
+    <!--android:title="@string/settings_other">-->
+    <!--<ListPreference-->
+    <!--android:dialogTitle="@string/settings_pic_size_title"-->
+    <!--android:entries="@array/settings_pic_size"-->
+    <!--android:entryValues="@array/settings_pic_size_value"-->
+    <!--android:key="pref_key_pic_size"-->
+    <!--android:title="@string/settings_pic_size_title" />-->
+    <!--<ListPreference-->
+    <!--android:dialogTitle="@string/settings_storage"-->
+    <!--android:key="pref_key_storage"-->
+    <!--android:title="@string/settings_storage" />-->
+    <!--<PreferenceScreen-->
+    <!--android:key="pref_key_update"-->
+    <!--android:title="@string/settings_check_update" >-->
+    <!--</PreferenceScreen>-->
+    <!--<com.tencent.ttpic.module.settings.GridViewPreference-->
+    <!--android:id="@+id/preference_recommend"-->
+    <!--android:key="pref_key_recommend"-->
+    <!--android:title="@string/settings_app_recommend"-->
+    <!--tencent:gridviewItemLayoutId="@layout/item_preference_gridview"-->
+    <!--tencent:superScriptIcon="@drawable/ic_new_dot_2"-->
+    <!--tencent:itemNumInOnePage="4"/>-->
+    <!--<PreferenceScreen-->
+    <!--android:key="pref_key_feedback"-->
+    <!--android:title="@string/settings_feedback" >-->
+    <!--</PreferenceScreen>-->
+    <!--<PreferenceScreen-->
+    <!--android:key="pref_key_rate"-->
+    <!--android:title="@string/settings_rate">-->
+    <!--</PreferenceScreen>-->
+    <!--<PreferenceScreen-->
+    <!--android:key="pref_key_guide_page"-->
+    <!--android:title="@string/settings_guide_page" >-->
+    <!--</PreferenceScreen>-->
+    <!--<PreferenceScreen-->
+    <!--android:key="pref_key_about"-->
+    <!--android:title="@string/settings_about" >-->
+    <!--</PreferenceScreen>-->
+    <!--<com.tencent.ttpic.module.settings.GridViewPreference-->
+    <!--android:key="pref_key_clear_storage"-->
+    <!--android:title="@string/settings_clear_storage"-->
+    <!--android:id="@+id/qq_secure_clear"-->
+    <!--android:widgetLayout="@layout/abc_action_bar_decor"-->
+    <!--tencent:gridviewItemLayoutId="@layout/item_preference_gridview"-->
+    <!--tencent:itemNumInOnePage="0"-->
+    <!--tencent:superScriptIcon="@drawable/ic_new_dot_2"/>-->
+    <!--</PreferenceCategory>-->
+</PreferenceScreen>

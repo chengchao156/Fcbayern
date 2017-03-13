@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <cn.fcbayern.android.util.image.RecyclingImageView
+        android:id="@+id/headImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/leftnav_avatar" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:text="登 录 / 注 册"
+        android:textColor="#790F28"
+        android:textSize="16sp" />
+</LinearLayout>

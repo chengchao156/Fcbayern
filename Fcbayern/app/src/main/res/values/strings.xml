@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">拜仁慕尼黑</string>
+
+    <string name="home">首 页</string>
+    <string name="news">新 闻</string>
+    <string name="photos">图 片</string>
+    <string name="video">视 频</string>
+    <string name="schedule">赛 程</string>
+    <string name="stand">积 分</string>
+    <string name="team">球 队</string>
+    <string name="club">俱 乐 部</string>
+    <string name="shop">商 店</string>
+    <string name="settings">设 置</string>
+
+    <string name="match_title">比赛中心</string>
+    <string name="cur_match_news">战报</string>
+    <string name="cur_match_album">图集</string>
+
+    <string name="setting_cache">清除缓存</string>
+    <string name="setting_version">版本</string>
+    <string name="push_message">消息通知</string>
+
+    <string name="clear_cache_tips">确定要清除缓存？</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_confirm">确认</string>
+
+    <string name="net_err">网络错误，请重试</string>
+    <string name="no_more_err">没有更多了</string>
+
+    <string name="euro_cup">欧冠</string>
+    <string name="liga">德甲</string>
+    <string name="german_cup">德国杯</string>
+
+    <string name="player_type_keeper">门将</string>
+    <string name="player_type_kick">前锋</string>
+    <string name="player_type_center">中场</string>
+    <string name="player_type_back">后卫</string>
+    <string name="player_type_coach">教练</string>
+
+    <string name="player_introduce">个人简介</string>
+    <string name="player_experience">球员介绍</string>
+    <string name="coach_experience">教练介绍</string>
+    <string name="birthday">出生日期</string>
+    <string name="birthplace">出生地点</string>
+    <string name="zodiac">星座</string>
+    <string name="bodyvalue">身高/体重/鞋码</string>
+    <string name="marry">婚姻状况</string>
+    <string name="edu">学历</string>
+
+    <string name="team_name">俱乐部</string>
+    <string name="win_name">胜</string>
+    <string name="draw_name">平</string>
+    <string name="lost_name">负</string>
+    <string name="goal_name">进/失球</string>
+    <string name="score_name">积分</string>
+
+    <string name="start_pull_to_refresh_label">下拉刷新</string>
+    <string name="start_release_to_refresh_label">放开以刷新</string>
+    <string name="start_refreshing_label">正在刷新</string>
+
+    <string name="end_pull_to_refresh_label">上拉加载更多</string>
+    <string name="end_release_to_refresh_label">放开以加载</string>
+    <string name="end_refreshing_label">正在加载</string>
+
+    <string name="go_to_next_album">进入下一个图集</string>
+
+    <string name="empty_tips">暂无数据，敬请期待!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

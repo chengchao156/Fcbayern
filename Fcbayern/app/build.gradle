@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+
+    signingConfigs {
+        release {
+            keyAlias 'fcbayern'
+            keyPassword '123qwe'
+            storeFile file('../Bayern.keystore')
+            storePassword '123qwe'
+        }
+    }
+
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "cn.fcbayern.android"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 24
+        versionName "2.1.0.4"
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+//        exclude 'assets/jpush_close.png'
+    }
+
+    productFlavors {
+
+        "google" {}
+        "xiaomi" {}
+        "wandoujia" {}
+        "360" {}
+        "baidu" {}
+        "91" {}
+        "hiapk" {}
+        "myapp" {}
+        "hupu" {}
+        "tencent" {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    defaultConfig {
+        applicationId "cn.fcbayern.android"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME    : applicationId,
+                JPUSH_CHANNEL_key: "developer-default",
+                JPUSH_KEY_VALUE  : '9436c5959a32e18d68a04a33']
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def oldFile = output.outputFile
+            if (variant.buildType.name.equals('release')) {
+                def releaseApkName = 'fcbayern-v' + defaultConfig.versionName + '-' + variant.productFlavors[0].name + '-release.apk'
+                output.outputFile = new File(oldFile.parent, releaseApkName)
+            }
+            if (variant.buildType.name.equals('debug')) {
+
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':PullToRefresh')
+    compile project(':PhotoView')
+    compile project(':SlidingMenu')
+//    compile 'cn.jiguang.sdk:jpush:3.0.0'
+    // 此处以JPush 3.0.0 版本为例。
+    //    compile(name: 'jpush-sdk-release1.8.0', ext: 'jar')
+    compile(name: 'social_sdk_library_project', ext: 'aar')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.android.support:support-v4:22.+'
+    compile 'com.android.support:appcompat-v7:22.+'
+    compile 'com.hupu:alienhttp:1.0-SNAPSHOT'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+    compile 'com.bigkoo:pickerview:2.1.1'
+    compile 'com.android.support:design:22.2.1'
+}

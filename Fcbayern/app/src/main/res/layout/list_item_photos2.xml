@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/photos_item_h"
+    android:padding="10dp"
+    android:background="@drawable/list_item_bg"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_margin="@dimen/photos_item_padding"-->
+        <!--android:padding="@dimen/photos_item_padding"-->
+        <!--android:background="#FFFFFF"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/time"
+                android:text="12:30"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/photos_item_padding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cn.fcbayern.android.util.image.RecyclingImageView
+                android:id="@+id/image1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+
+            <cn.fcbayern.android.util.image.RecyclingImageView
+                android:id="@+id/image2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/photos_item_padding"
+                android:layout_marginRight="@dimen/photos_item_padding"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+
+            <cn.fcbayern.android.util.image.RecyclingImageView
+                android:id="@+id/image3"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    <!--</LinearLayout>-->
+
+</LinearLayout>
